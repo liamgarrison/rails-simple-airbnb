@@ -2,7 +2,9 @@
 <div class="flats d-flex align-items-start justify-content-between flex-wrap">
   <% @flats.each do |flat| %>
     <div class="card">
-      <p class="card-title"><%= flat.name %> </p>
+      <%= link_to flat_path(flat) do %>
+        <p class="card-title"><%= flat.name %> </p>
+      <% end %>
       <p class="card-subtitle"><%= flat.address %></p>
       <p class="card-meta">
         <i class="fas fa-user-friends"></i> <%= flat.number_of_guests %>
