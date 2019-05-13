@@ -1,23 +1,31 @@
 .card {
-  border-radius: $border-radius;
-  border: 1px solid black;
-  margin: 10px;
-  flex-basis: 300px;
-  flex-grow: 1;
+  border-radius: 4px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
   padding: 20px;
-}
-
-.card-title {
-  font-size: 24px;
-  font-weight: bold;
+  height: 200px;
   margin-bottom: 20px;
 }
 
+.card a {
+  color: black;
+  text-decoration: none;
+
+}
+
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  word-wrap: break-word;
+}
+
 .card-subtitle {
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 15px;
 }
 
 .card-meta {
-  font-size: 16px;
+  font-size: 14px;
 }

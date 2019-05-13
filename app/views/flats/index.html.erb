@@ -1,15 +1,17 @@
 <h1>All our flats (<%= @flats.length %>)</h1>
-<div class="flats d-flex align-items-start justify-content-between flex-wrap">
+<div class="row">
   <% @flats.each do |flat| %>
-    <div class="card">
-      <%= link_to flat_path(flat) do %>
-        <p class="card-title"><%= flat.name %> </p>
-      <% end %>
-      <p class="card-subtitle"><%= flat.address %></p>
-      <p class="card-meta">
-        <i class="fas fa-user-friends"></i> <%= flat.number_of_guests %>
-        <i class="fas fa-pound-sign"></i> <%= flat.price_per_night %>
-      </p>
+    <div class="col-4">
+      <div class="card">
+        <%= link_to flat_path(flat) do %>
+          <p class="card-title"><%= flat.name %> </p>
+          <p class="card-subtitle"><%= flat.address %></p>
+          <p class="card-meta">
+            <i class="fas fa-user-friends"></i> <%= flat.number_of_guests %>
+            <i class="fas fa-pound-sign"></i> <%= flat.price_per_night %>
+          </p>
+        <% end %>
+      </div>
     </div>
   <% end %>
 </div>

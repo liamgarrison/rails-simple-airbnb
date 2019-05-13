@@ -1,10 +1,21 @@
 # Empty database
 Flat.destroy_all
 
+# names
+
+name = [
+  "Immaculate Architect's Townhouse with Terrace",
+  "BRIGHT MODERN & CLEAN 1 BED with 24h CHECK IN",
+  "Bright, Comfortable Room in Hospitable, Gay Household",
+  "PRIVATE ROOM IN HOUSE",
+  "NYC STYLE 1500 Sqft PENTHOUSE LOFT - 50ft to Tube",
+  "Cosy room in Russell Square, Shared."
+]
+
 # Seed the flats
 20.times do
   Flat.create!({
-    name: Faker::Lorem.sentence(6),
+    name: name.sample,
     address: Faker::Address.full_address,
     price_per_night: rand(30..100),
     number_of_guests: rand(1..5)
