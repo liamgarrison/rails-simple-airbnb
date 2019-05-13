@@ -5,14 +5,17 @@
       <div class="col-4">
         <div class="card">
           <%= link_to flat_path(flat) do %>
-            <p class="card-title"><%= flat.name %> </p>
-            <p class="card-subtitle"><%= flat.address %></p>
-            <p class="card-meta">
-              <i class="fas fa-user-friends"></i> <%= flat.number_of_guests %>
-              <i class="fas fa-pound-sign"></i> <%= flat.price_per_night %>
-            </p>
-          <% end %>
-        </div>
+            <img src="<%= flat.photo_url %>" alt="" class="w-100">
+            <div class="card-text">
+                <p class="card-title"><%= flat.name %> </p>
+                <p class="card-subtitle"><%= flat.address %></p>
+                <p class="card-meta">
+                  <i class="fas fa-user-friends"></i> <%= flat.number_of_guests %>
+                  <i class="fas fa-pound-sign"></i> <%= flat.price_per_night %>
+                </p>
+            </div>
+          </div>
+        <% end %>
       </div>
     <% end %>
   </div>
