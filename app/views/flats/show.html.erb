@@ -1,1 +1,26 @@
-<h1 class="mb-5"><%= @flat.name %></h1>
+<div class="row">
+  <div class="col-8">
+    <div class="show-card bg-light rounded p-3 mb-4">
+      <h1 class=""><%= @flat.name %></h1>
+      <p><%= @flat.address %></p>
+    </div>
+    <div class="show-card bg-light rounded p-3 mb-4">
+      <h2 class="">A bit more about this flat...</h2>
+      <p><%= @flat.description %></p>
+    </div>
+    <div class="show-card bg-light rounded p-3 mb-4">
+      <h2>Details</h2>
+      <p class="">
+        <i class="fas fa-user-friends"></i> <%= @flat.number_of_guests %>
+        <i class="fas fa-pound-sign"></i> <%= @flat.price_per_night %>
+      </p>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="show-card bg-light rounded p-3 mb-4">
+      <h2>Other bits</h2>
+      <%= link_to "Edit Flat", edit_flat_path, class: 'btn btn-info' %>
+      <%= link_to "Delete Flat", flat_path, class: 'btn btn-warning', method: :delete, data: {confirm: 'Are you sure?'} %>
+    </div>
+  </div>
+</div>
