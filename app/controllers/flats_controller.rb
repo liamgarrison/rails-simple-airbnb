@@ -39,7 +39,8 @@ class FlatsController < ApplicationController
         :description,
         :address,
         :price_per_night,
-        :number_of_guests
+        :number_of_guests,
+        :photo_url
       )
   end
 

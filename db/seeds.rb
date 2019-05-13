@@ -19,6 +19,7 @@ name = [
     address: Faker::Address.full_address,
     description: Faker::Lorem.sentence(20),
     price_per_night: rand(30..100),
-    number_of_guests: rand(1..5)
+    number_of_guests: rand(1..5),
+    photo_url: 'https://source.unsplash.com/1600x900/?house'
   })
 end
